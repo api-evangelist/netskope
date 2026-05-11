@@ -1,0 +1,77 @@
+aid: netskope
+name: Netskope
+description: >-
+  Netskope is a security service edge (SSE) and SASE platform delivering
+  cloud-native Secure Web Gateway, CASB, Zero Trust Network Access, data loss
+  prevention, and threat protection from its NewEdge global network. The
+  Netskope REST API v2 provides tenant-level programmatic access to events,
+  alerts, incidents, policies, IoCs, SCIM provisioning, and configuration so
+  SOC and platform teams can automate SOAR, SIEM, and IGA workflows using
+  service-account bearer tokens in the Netskope-Api-Token header.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Security
+  - SASE
+  - SSE
+  - CASB
+  - Zero Trust
+  - SWG
+  - DLP
+  - Cloud Security
+url: https://raw.githubusercontent.com/api-evangelist/netskope/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: netskope:rest-api-v2
+    name: Netskope REST API v2
+    description: >-
+      Tenant-scoped REST API for retrieving events, alerts, incidents, audit
+      logs, network and application telemetry, and for managing policies, IoCs,
+      and configuration on the Netskope platform. Authenticates with a bearer
+      token passed in the Netskope-Api-Token header and is provisioned via
+      RBAC v3 service accounts.
+    humanURL: https://docs.netskope.com/en/rest-api-v2-overview-312207/
+    baseURL: https://{tenant}.goskope.com/api/v2
+    tags:
+      - REST
+      - Events
+      - Alerts
+      - Policies
+      - SCIM
+      - Service Account
+    properties:
+      - type: Documentation
+        url: https://docs.netskope.com/en/rest-api-v2-overview-312207/
+      - type: API Tokens
+        url: https://docs.netskope.com/en/api-tokens-2/
+  - aid: netskope:scim-api
+    name: Netskope SCIM API
+    description: >-
+      SCIM 2.0 provisioning API for users and groups, enabling identity
+      providers and IGA platforms to synchronize directory state into Netskope
+      using a dedicated SCIM token issued from the Security Cloud Platform.
+    humanURL: https://docs.netskope.com/en/scim-api-overview/
+    baseURL: https://{tenant}.goskope.com/api/v2/scim
+    tags:
+      - SCIM
+      - Provisioning
+      - Identity
+      - Users
+      - Groups
+    properties:
+      - type: Documentation
+        url: https://docs.netskope.com/en/scim-api-overview/
+common:
+  - type: Website
+    url: https://www.netskope.com/
+  - type: Documentation
+    url: https://docs.netskope.com/
+  - type: Pricing
+    url: https://www.netskope.com/request-pricing
+  - type: Sign Up
+    url: https://www.netskope.com/request-demo
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
