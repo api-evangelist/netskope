@@ -70,7 +70,7 @@ common:
     url: https://docs.netskope.com/
   - type: Pricing
     url: https://www.netskope.com/request-pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://www.netskope.com/request-demo
 maintainers:
   - FN: Kin Lane
