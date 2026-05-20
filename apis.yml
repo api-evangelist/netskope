@@ -64,6 +64,10 @@ apis:
       - type: Documentation
         url: https://docs.netskope.com/en/scim-api-overview/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/netskopeoss
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/netskope
   - type: Website
     url: https://www.netskope.com/
   - type: Documentation
