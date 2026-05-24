@@ -76,6 +76,8 @@ common:
     url: https://www.netskope.com/request-pricing
   - type: SignUp
     url: https://www.netskope.com/request-demo
+  - type: LLMsTxt
+    url: https://docs.netskope.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
