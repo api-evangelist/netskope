@@ -64,6 +64,10 @@ apis:
       - type: Documentation
         url: https://docs.netskope.com/en/scim-api-overview/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/netskope-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/netskope-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/netskopeoss
   - type: LinkedIn
