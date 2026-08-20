@@ -47,6 +47,13 @@ apis:
     baseURL: https://{tenant}.goskope.com/api/v2
     tags:
       - REST
+      - Event
+      - Alerts
+      - Policies
+      - SCIM
+      - ServiceAccount
+    tags_raw:
+      - REST
       - Events
       - Alerts
       - Policies
@@ -66,6 +73,12 @@ apis:
     humanURL: https://docs.netskope.com/en/scim-api-overview/
     baseURL: https://{tenant}.goskope.com/api/v2/scim
     tags:
+      - SCIM
+      - Provisioning
+      - Identity
+      - User
+      - Group
+    tags_raw:
       - SCIM
       - Provisioning
       - Identity
