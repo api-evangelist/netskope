@@ -9,6 +9,17 @@ description: >-
   SOC and platform teams can automate SOAR, SIEM, and IGA workflows using
   service-account bearer tokens in the Netskope-Api-Token header.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
