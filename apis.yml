@@ -62,7 +62,7 @@ apis:
       - Alerts
       - Policies
       - SCIM
-      - ServiceAccount
+      - Service Account
     tags_raw:
       - REST
       - Events
