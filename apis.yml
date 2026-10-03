@@ -1,5 +1,7 @@
 aid: netskope
+
 name: Netskope
+
 description: >-
   Netskope is a security service edge (SSE) and SASE platform delivering
   cloud-native Secure Web Gateway, CASB, Zero Trust Network Access, data loss
@@ -8,7 +10,9 @@ description: >-
   alerts, incidents, policies, IoCs, SCIM provisioning, and configuration so
   SOC and platform teams can automate SOAR, SIEM, and IGA workflows using
   service-account bearer tokens in the Netskope-Api-Token header.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -20,6 +24,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -31,7 +36,9 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/netskope.png
+
 tags:
   - Security
   - SASE
@@ -41,10 +48,75 @@ tags:
   - SWG
   - DLP
   - Cloud Security
+
 url: https://raw.githubusercontent.com/api-evangelist/netskope/refs/heads/main/apis.yml
+
 created: '2026-05-11'
+
 modified: '2026-05-11'
+
 specificationVersion: '0.23'
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+
+common:
+  - type: Spectral
+    url: rules/netskope-rules.yml
+  - type: Webhooks
+    url: asyncapi/netskope-webhooks.yml
+  - type: ChangeLog
+    url: changelog/netskope-changelog.yml
+  - type: Security
+    url: https://www.netskope.com/vulnerability-disclosure-policy
+  - type: Conformance
+    url: conformance/netskope-conformance.yml
+  - type: LLMsTxt
+    url: llms/netskope-llms.txt
+  - type: SecurityTxt
+    url: well-known/netskope-security.txt
+  - type: SecurityTxt
+    url: well-known/netskope-netskope-security.txt
+  - type: WellKnown
+    url: well-known/netskope-well-known.yml
+  - type: Hosts
+    url: hosts/netskope-hosts.yml
+  - type: Vendors
+    url: vendors/netskope-vendors.yml
+  - type: SDKs
+    url: packages/netskope-packages.yml
+  - type: Packages
+    url: packages/netskope-packages.yml
+  - type: Newsroom
+    url: https://www.netskope.com/company/newsroom
+  - type: GettingStarted
+    url: https://docs.netskope.com/en/getting-started
+  - type: VulnerabilityDisclosure
+    url: security/netskope-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/netskope-domain-security.yml
+  - type: GitHubOrganization
+    url: https://github.com/netskopeoss
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/netskope
+  - type: Website
+    url: https://www.netskope.com/
+  - type: Documentation
+    url: https://docs.netskope.com/
+  - type: DeveloperPortal
+    url: https://docs.netskope.com/
+  - type: Blog
+    url: https://www.netskope.com/blog
+  - type: TermsOfService
+    url: https://www.netskope.com/terms-of-use
+  - type: PrivacyPolicy
+    url: https://www.netskope.com/privacy-policy
+  - type: Support
+    url: https://support.netskope.com/s/
+  - type: Signup
+    url: https://www.netskope.com/request-demo
+
 apis:
   - aid: netskope:rest-api-v2
     name: Netskope REST API v2
@@ -98,25 +170,41 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.netskope.com/en/scim-api-overview/
-common:
-  - type: VulnerabilityDisclosure
-    url: security/netskope-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/netskope-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/netskopeoss
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/netskope
-  - type: Website
-    url: https://www.netskope.com/
-  - type: Documentation
-    url: https://docs.netskope.com/
-  - type: Pricing
-    url: https://www.netskope.com/request-pricing
-  - type: Signup
-    url: https://www.netskope.com/request-demo
-  - type: LlmsText
-    url: https://docs.netskope.com/llms.txt
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+
+  - aid: netskope:netskope-api
+
+    name: Netskope API
+
+    description: 'Netskope API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-03); not
+
+      the provider''s own document.'
+
+    humanURL: https://community.netskope.com/community-resources-13
+
+    properties:
+
+    - type: OpenAPI
+
+      url: openapi/_ae-authored/netskope-openapi-generated.yml
+
+      x-provenance: generated
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-10-03'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://community.netskope.com/mcp
+    status: 403
+  - url: https://www.netskope.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 16
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

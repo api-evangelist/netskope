@@ -1,0 +1,24 @@
+generated: "2026-10-03"
+method: probed
+source: "https://www.netskope.com/privacy-policy"
+signals:
+  data_subject_request:
+    evidence:
+      - source: "https://www.netskope.com/privacy-policy"
+        http_status: 200
+        fetched: "/tmp/privacy.html"
+        quote: "Right to Access and Data Portability. If you would like information or confirmation on whether and where we are processing your personal information, you may submit a Right to Access Request. Depending on your jurisdiction, you may have specific rights to receive a copy of the personal information you have provided to us in a structured, commonly used, machine-readable format that supports re-use, or to request the transfer of your personal information to another person."
+        section: "Your Rights and Choices Relating to Your Personal Information"
+        note: "Provides right to access and data portability request."
+      - source: "https://www.netskope.com/privacy-policy"
+        http_status: 200
+        fetched: "/tmp/privacy.html"
+        quote: "Right to Delete. You may make a request to delete any personal information we have collected from you, subject to certain lawful exceptions."
+        section: "Your Rights and Choices Relating to Your Personal Information"
+        note: "Provides right to deletion request."
+      - source: "https://www.netskope.com/privacy-policy"
+        http_status: 200
+        fetched: "/tmp/privacy.html"
+        quote: "Right to Correct, Amend, or Delete Inaccurate Data. You may have the right to obtain rectification of any inaccurate or incomplete personal information we hold about you."
+        section: "Your Rights and Choices Relating to Your Personal Information"
+        note: "Provides right to correction of data."
