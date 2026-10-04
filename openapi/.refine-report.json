@@ -1,0 +1,21 @@
+{
+  "provider": "netskope",
+  "sources": [
+    "_ae-authored/netskope-openapi-generated.yml"
+  ],
+  "outputs": [
+    "netskope-deviceclassification-api-openapi.yml",
+    "netskope-scale-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "netskope-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "netskope-openapi-generated.yml: tagged paths POST /api/v2/deviceclassification/tags -> Deviceclassification",
+    "netskope-openapi-generated.yml: declared missing tag: Deviceclassification",
+    "apis.yml register: written (+2 apis, 4 total)"
+  ],
+  "skipped": []
+}
