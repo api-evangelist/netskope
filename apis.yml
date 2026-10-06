@@ -43,7 +43,7 @@ tags:
   - Cloud Security
 url: https://raw.githubusercontent.com/api-evangelist/netskope/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: netskope:rest-api-v2
@@ -99,6 +99,10 @@ apis:
       - type: Documentation
         url: https://docs.netskope.com/en/scim-api-overview/
 common:
+  - url: https://www.netskope.com/company/newsroom
+    type: Blog
+  - url: https://www.netskope.com/feed
+    type: BlogRSS
   - type: VulnerabilityDisclosure
     url: security/netskope-vulnerability-disclosure.yml
   - type: DomainSecurity
