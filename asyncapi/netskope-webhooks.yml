@@ -1,0 +1,20 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.netskope.com/company/events/netskope-at-rsa
+sources:
+- https://www.netskope.com/company/events/netskope-at-rsa
+- https://community.netskope.com/user-notifications-55
+- https://community.netskope.com/events
+- https://community.netskope.com/discussions-37/netskope-ai-secops-events-to-automated-verdict-and-response-in-crowdstrike-8939
+description: Netskope AI SecOps can stream case, user‑risk, and AI‑risk events via outbound webhooks.
+events:
+- event: case.created
+  description: Netskope AI SecOps sends an event when a new case is created.
+- event: case.assigned
+  description: Netskope AI SecOps sends an event when a case is assigned.
+- event: risk.user.threshold_exceeded
+  description: Netskope AI SecOps sends an event when a user risk threshold is exceeded.
+delivery: {}
+note: The pages do not specify signature headers, authentication method, or retry behavior for the webhooks.
+docs: https://www.netskope.com/company/events/netskope-at-rsa

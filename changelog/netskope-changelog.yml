@@ -1,0 +1,63 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.netskope.com/en/release-notes-subscription
+sources:
+- https://docs.netskope.com/en/release-notes-subscription
+- https://community.netskope.com/product-updates
+entries:
+- breaking: false
+  highlights:
+  - The Netskope Cloud R141.1.0 hotfix documentation is here!
+  - New & updated articles are live on docs.netskope.com.
+  date: '2026-09-16'
+- breaking: false
+  highlights:
+  - 'The key new or updated feature is: SaaS Security Posture Management Control Visibility to SSPM Findings by App Instance'
+  date: '2026-09-01'
+- breaking: false
+  highlights:
+  - The Netskope Cloud R140.1.0 hotfix documentation is here!
+  - New & updated articles are live on docs.netskope.com.
+  date: '2026-08-17'
+- breaking: false
+  highlights:
+  - 'The key new or updated feature is: Netskope Private Access (NPA) NPA AI Agent for Generating App Segments & Policies'
+  date: '2026-08-03'
+- breaking: false
+  highlights:
+  - 'The key new or updated features are: Netskope Client Steering Support for FIPS-140-3 compliance requirements Ability to Delete Devices AI
+    Command Center (AICC) AI Command Center - General Availability (GA)'
+  date: '2026-07-06'
+- breaking: false
+  highlights:
+  - The Netskope Cloud R138.1.0 hotfix documentation is here!
+  - New & updated articles are live on docs.netskope.com.
+  date: '2026-06-23'
+- breaking: false
+  highlights:
+  - 'The key new or updated feature is: Netskope Client Steering Enhanced Selection for Golden Monthly Releases'
+  date: '2026-06-08'
+- breaking: false
+  highlights:
+  - The Netskope Cloud R137.1.0 hotfix documentation is here!
+  - New & updated articles are live on docs.netskope.com.
+  date: '2026-05-18'
+- breaking: false
+  highlights:
+  - 'Release Highlights: SaaS Security Posture Management (SSPM) Privileged User Visibility Enhancements Netskope Private Access (NPA) NPA AI
+    Agent for App Audit – Self Service UI'
+  date: '2026-05-05'
+- breaking: false
+  highlights:
+  - The Netskope Cloud R136.1 hotfix documentation is here!
+  - New & updated articles are live on docs.netskope.com.
+  date: '2026-04-21'
+- breaking: false
+  highlights:
+  - 'The key new or updated features are: AI Guardrails AI Prompt and Response Guardrails for Content Moderation and Protection from AI Threats
+    AI Red Teaming AI Red Team Product CASB Real-time Protection Agentic Broker Next Generation API Data Protection'
+  date: '2026-03-02'
+current_version: 141.1.0
+note: Versioning scheme follows major.minor.patch format.
+docs: https://docs.netskope.com/en/release-notes-subscription
