@@ -1,9 +1,13 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- crowdstrike/integrations/crowdstrike-integration-edges.yml
 - https://aws.amazon.com/marketplace/
 - https://azuremarketplace.microsoft.com/
 - https://marketplace.atlassian.com/
+- microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+- okta/integrations/okta-integration-edges.yml
+- ping-identity/integrations/ping-identity-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -74,5 +78,95 @@ edges:
   publisher_name: Netskope CASB API Protection
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: CrowdStrike (own)
+  partner: crowdstrike
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.crowdstrike.com/listings/netskope-cloud-access-security-broker-for-falcon-logscale/
+  mirror_of: crowdstrike/integrations/crowdstrike-integration-edges.yml
+  apps:
+  - Netskope CASB for Falcon LogScale
+  - Netskope Transaction Logs Data Connector
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+- partner_name: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Netskope
+  mirror_of: microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+  apps:
+  - Netskope
+  - NetskopeAlertEvents
+  - NetskopeWebTx
+  - Netskopev2
+  listing_count: 4
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Security - Network
+  badges:
+  - support-tier:partner
+- partner_name: Okta (own)
+  partner: okta
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.okta.com/integrations/netskopeadminconsole/
+  mirror_of: okta/integrations/okta-integration-edges.yml
+  apps:
+  - Netskope Admin Console
+  - Netskope User Enrollment
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Single Sign-On
+  badges:
+  - OKTA_VERIFIED
+  features:
+  - CREATE
+  - DEACTIVATE
+  - ENTITLEMENT_MANAGEMENT
+  - SAML
+  - SCHEMA_DISCOVERY
+  - SWA
+  - UPDATE
+  - WORKFLOWS_COMPATIBLE
+  - WORKFLOWS_CONNECTORS
+  - GROUP_LINKING
+  - GROUP_PUSH
+  - OIDC
+  - SECURE_IDENTITY_INTEGRATIONS_FUNDAMENTAL
+- partner_name: Ping Identity (own)
+  partner: ping-identity
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.pingone.com/item/netskope-sso-and-user-provisioning-for-pingone
+  mirror_of: ping-identity/integrations/ping-identity-integration-edges.yml
+  apps:
+  - Netskope SSO and User Provisioning for PingOne
+  - Netskope SSO and User Provisioning for PingFederate
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
 source:
 - https://marketplace.atlassian.com/
