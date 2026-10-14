@@ -27,3 +27,15 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: netskope-atlassian-marketplace
+  label: Atlassian Marketplace
+  partner: atlassian
+  partner_name: Atlassian Marketplace
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  evidence: https://marketplace.atlassian.com/vendors/1222901/netskope-casb-api-protection
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
