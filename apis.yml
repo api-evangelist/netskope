@@ -46,58 +46,76 @@ created: '2026-05-11'
 modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
-  - aid: netskope:rest-api-v2
-    name: Netskope REST API v2
-    description: >-
-      Tenant-scoped REST API for retrieving events, alerts, incidents, audit
-      logs, network and application telemetry, and for managing policies, IoCs,
-      and configuration on the Netskope platform. Authenticates with a bearer
-      token passed in the Netskope-Api-Token header and is provisioned via
-      RBAC v3 service accounts.
-    humanURL: https://docs.netskope.com/en/rest-api-v2-overview-312207/
-    baseURL: https://{tenant}.goskope.com/api/v2
-    tags:
-      - REST
-      - Event
-      - Alerts
-      - Policies
-      - SCIM
-      - ServiceAccount
-    tags_raw:
-      - REST
-      - Events
-      - Alerts
-      - Policies
-      - SCIM
-      - Service Account
-    properties:
-      - type: Documentation
-        url: https://docs.netskope.com/en/rest-api-v2-overview-312207/
-      - type: API Tokens
-        url: https://docs.netskope.com/en/api-tokens-2/
-  - aid: netskope:scim-api
-    name: Netskope SCIM API
-    description: >-
-      SCIM 2.0 provisioning API for users and groups, enabling identity
-      providers and IGA platforms to synchronize directory state into Netskope
-      using a dedicated SCIM token issued from the Security Cloud Platform.
-    humanURL: https://docs.netskope.com/en/scim-api-overview/
-    baseURL: https://{tenant}.goskope.com/api/v2/scim
-    tags:
-      - SCIM
-      - Provisioning
-      - Identity
-      - User
-      - Group
-    tags_raw:
-      - SCIM
-      - Provisioning
-      - Identity
-      - Users
-      - Groups
-    properties:
-      - type: Documentation
-        url: https://docs.netskope.com/en/scim-api-overview/
+- aid: netskope:rest-api-v2
+  name: Netskope REST API v2
+  description: >-
+    Tenant-scoped REST API for retrieving events, alerts, incidents, audit logs, network and application
+    telemetry, and for managing policies, IoCs, and configuration on the Netskope platform. Authenticates
+    with a bearer token passed in the Netskope-Api-Token header and is provisioned via RBAC v3 service
+    accounts.
+  humanURL: https://docs.netskope.com/en/rest-api-v2-overview-312207/
+  baseURL: https://{tenant}.goskope.com/api/v2
+  tags:
+  - REST
+  - Event
+  - Alerts
+  - Policies
+  - SCIM
+  - ServiceAccount
+  tags_raw:
+  - REST
+  - Events
+  - Alerts
+  - Policies
+  - SCIM
+  - Service Account
+  properties:
+  - type: Documentation
+    url: https://docs.netskope.com/en/rest-api-v2-overview-312207/
+  - type: API Tokens
+    url: https://docs.netskope.com/en/api-tokens-2/
+- aid: netskope:scim-api
+  name: Netskope SCIM API
+  description: >-
+    SCIM 2.0 provisioning API for users and groups, enabling identity providers and IGA platforms to synchronize
+    directory state into Netskope using a dedicated SCIM token issued from the Security Cloud Platform.
+  humanURL: https://docs.netskope.com/en/scim-api-overview/
+  baseURL: https://{tenant}.goskope.com/api/v2/scim
+  tags:
+  - SCIM
+  - Provisioning
+  - Identity
+  - User
+  - Group
+  tags_raw:
+  - SCIM
+  - Provisioning
+  - Identity
+  - Users
+  - Groups
+  properties:
+  - type: Documentation
+    url: https://docs.netskope.com/en/scim-api-overview/
+- aid: netskope:netskope-deviceclassification-api
+  name: Netskope Deviceclassification API
+  description: The Deviceclassification API from Netskope — 1 operation(s) for deviceclassification.
+  humanURL: https://docs.netskope.com/en/rest-api-v2-overview-312207/
+  baseURL: https://{tenant}.goskope.com/api/v2
+  tags:
+  - Deviceclassification
+  properties:
+  - type: OpenAPI
+    url: openapi/netskope-deviceclassification-api-openapi.yml
+- aid: netskope:netskope-scale-api
+  name: Netskope Scale API
+  description: The Scale API from Netskope — 2 operation(s) for scale.
+  humanURL: https://docs.netskope.com/en/rest-api-v2-overview-312207/
+  baseURL: https://{tenant}.goskope.com/api/v2
+  tags:
+  - Scale
+  properties:
+  - type: OpenAPI
+    url: openapi/netskope-scale-api-openapi.yml
 common:
   - url: https://www.netskope.com/company/newsroom
     type: Blog

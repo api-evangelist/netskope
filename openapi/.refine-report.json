@@ -17,5 +17,8 @@
     "netskope-openapi-generated.yml: declared missing tag: Deviceclassification",
     "apis.yml register: written (+2 apis, 4 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "netskope-deviceclassification-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "netskope-scale-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
