@@ -23,6 +23,8 @@ checked:
 - https://cloudsecurityalliance.org/membership/current
 - https://fidoalliance.org/certification/fido-certified-products/
 - https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
+- opentofu/integrations/opentofu-integration-edges.yml
+- terraform/integrations/terraform-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -93,6 +95,138 @@ edges:
   publisher_name: Netskope CASB API Protection
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: FedRAMP
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://marketplace.fedramp.gov/products/FR1831538827
+  category: FedRAMP authorization
+  contract_reference:
+    register: FedRAMP Marketplace data (github.com/18F/fedramp-data data/data.json @4b73d9247f)
+    standard: FedRAMP
+    spec_file: null
+    role: fedramp-authorized
+    registered_name: Netskope, Inc.
+    register_id: FR1831538827
+    matched_domain: netskope.com
+    matched_by: domain
+    domain_source: website
+    designations:
+    - Compliant
+    - In Process
+    packages:
+    - Netskope OneCloud Government
+    - Netskope Security Cloud
+    service_models:
+    - SaaS
+    paths:
+    - Agency
+    signal_note: certified_products = one entry per AUTHORIZED impact level, never per package; packages, service
+      models, paths and leveraging agencies are context, never counted. The register lists current designations
+      only (revoked / expired are removed), so lapsed is always false
+    detected_by: sweep-gov-cloud.py
+    detected: '2026-10-15'
+    certified_products:
+    - product: FedRAMP Moderate
+      impact_level: Moderate
+      lapsed: false
+      latest_authorization: '2022-09-01'
+  detected_by: sweep-gov-cloud.py
+  first_seen: '2026-10-15'
+- partner_name: Cloud Security Alliance STAR Registry
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cloudsecurityalliance.org/star/registry/netskope/services/netskope-cloud-security-services-platform
+  category: Cloud security assurance
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-2
+    registered_name: Netskope
+    registry_id: netskope
+    service_url: http://www.netskope.com/
+    matched_domain: netskope.com
+    matched_by: domain
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    - STAR Level 2
+    certified_products:
+    - product: STAR Certification
+      lapsed: false
+      latest: '2025-10-22'
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
+- partner_name: PeeringDB (interconnection register)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.peeringdb.com/net/10670
+  category: network interconnection register
+  contract_reference:
+    register: PeeringDB (peeringdb.com/api net, ix, fac, org)
+    standard: null
+    spec_file: null
+    role: peeringdb-network
+    registered_name: Netskope
+    register_id: https://www.peeringdb.com/net/10670
+    matched_domain: netskope.com
+    matched_by: domain
+    asns:
+    - 55256
+    info_types:
+    - Network Services
+    ix_presence: 143
+    exchanges_operated: []
+    facilities_operated: 0
+    signal_note: 'participation only: PeeringDB is self-registered by network operators; ASNs, IX presence and facility
+      counts are context, never counted'
+    detected_by: sweep-network-edge.py
+    detected: '2026-10-20'
+  detected_by: sweep-network-edge.py
+  first_seen: '2026-10-20'
+- partner_name: CISA Secure by Design Pledge
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
+  category: secure-by-design software pledge
+  contract_reference:
+    register: CISA Secure by Design Pledge signers (cisa.gov/securebydesign/pledge)
+    standard: 'CISA Secure by Design Pledge (seven goals: MFA, default passwords, vulnerability classes, patches,
+      disclosure policy, CVEs, evidence of intrusions)'
+    spec_file: null
+    role: secure-by-design-pledge-signer
+    registered_name: Netskope
+    matched_domain: netskope.com
+    matched_by: domain
+    signal_note: 'participation only: a voluntary public pledge listed by CISA; not an audit or conformance result
+      (no certified_products, no tier)'
+    detected_by: sweep-cloud-security-star.py
+    detected: '2026-10-20'
+    identity: wikidata Q17082991 'Netskope, Inc' P856 http://www.netskope.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-cloud-security-star.py
+  first_seen: '2026-10-20'
 - partner_name: CrowdStrike (own)
   partner: crowdstrike
   partner_match: mirror
@@ -234,137 +368,43 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
-- partner_name: FedRAMP
-  partner: null
-  partner_match: register
-  type: contract
-  channel: regulator-register
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://marketplace.fedramp.gov/products/FR1831538827
-  category: FedRAMP authorization
-  contract_reference:
-    register: FedRAMP Marketplace data (github.com/18F/fedramp-data data/data.json @4b73d9247f)
-    standard: FedRAMP
-    spec_file: null
-    role: fedramp-authorized
-    registered_name: Netskope, Inc.
-    register_id: FR1831538827
-    matched_domain: netskope.com
-    matched_by: domain
-    domain_source: website
-    designations:
-    - Compliant
-    - In Process
-    packages:
-    - Netskope OneCloud Government
-    - Netskope Security Cloud
-    service_models:
-    - SaaS
-    paths:
-    - Agency
-    signal_note: certified_products = one entry per AUTHORIZED impact level, never per package; packages, service
-      models, paths and leveraging agencies are context, never counted. The register lists current designations
-      only (revoked / expired are removed), so lapsed is always false
-    detected_by: sweep-gov-cloud.py
-    detected: '2026-10-15'
-    certified_products:
-    - product: FedRAMP Moderate
-      impact_level: Moderate
-      lapsed: false
-      latest_authorization: '2022-09-01'
-  detected_by: sweep-gov-cloud.py
-  first_seen: '2026-10-15'
-- partner_name: Cloud Security Alliance STAR Registry
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://cloudsecurityalliance.org/star/registry/netskope/services/netskope-cloud-security-services-platform
-  category: Cloud security assurance
-  contract_reference:
-    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
-    spec_file: null
-    standard: CSA STAR
-    role: star-level-2
-    registered_name: Netskope
-    registry_id: netskope
-    service_url: http://www.netskope.com/
-    matched_domain: netskope.com
-    matched_by: domain
-    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
-    levels:
-    - STAR Level 1
-    - STAR Level 2
-    certified_products:
-    - product: STAR Certification
-      lapsed: false
-      latest: '2025-10-22'
-    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
-      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
-      = every instance marked (Deprecated) by the registry; service counts never recorded
-    detected_by: sweep-compliance-assurance.py
-    detected: '2026-10-20'
-  detected_by: sweep-compliance-assurance.py
-  first_seen: '2026-10-20'
-- partner_name: PeeringDB (interconnection register)
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://www.peeringdb.com/net/10670
-  category: network interconnection register
-  contract_reference:
-    register: PeeringDB (peeringdb.com/api net, ix, fac, org)
-    standard: null
-    spec_file: null
-    role: peeringdb-network
-    registered_name: Netskope
-    register_id: https://www.peeringdb.com/net/10670
-    matched_domain: netskope.com
-    matched_by: domain
-    asns:
-    - 55256
-    info_types:
-    - Network Services
-    ix_presence: 143
-    exchanges_operated: []
-    facilities_operated: 0
-    signal_note: 'participation only: PeeringDB is self-registered by network operators; ASNs, IX presence and facility
-      counts are context, never counted'
-    detected_by: sweep-network-edge.py
-    detected: '2026-10-20'
-  detected_by: sweep-network-edge.py
-  first_seen: '2026-10-20'
-- partner_name: CISA Secure by Design Pledge
-  partner: null
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
-  category: secure-by-design software pledge
-  contract_reference:
-    register: CISA Secure by Design Pledge signers (cisa.gov/securebydesign/pledge)
-    standard: 'CISA Secure by Design Pledge (seven goals: MFA, default passwords, vulnerability classes, patches,
-      disclosure policy, CVEs, evidence of intrusions)'
-    spec_file: null
-    role: secure-by-design-pledge-signer
-    registered_name: Netskope
-    matched_domain: netskope.com
-    matched_by: domain
-    signal_note: 'participation only: a voluntary public pledge listed by CISA; not an audit or conformance result
-      (no certified_products, no tier)'
-    detected_by: sweep-cloud-security-star.py
-    detected: '2026-10-20'
-    identity: wikidata Q17082991 'Netskope, Inc' P856 http://www.netskope.com/
-    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
-  detected_by: sweep-cloud-security-star.py
-  first_seen: '2026-10-20'
+- partner_name: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: opentofu-registry
+  evidence: https://search.opentofu.org/provider/netskopeoss/netskope
+  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
+  apps:
+  - netskopeoss/netskope
+  - netskopeoss/netskopebwan
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/netskopeoss/netskope
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - netskopeoss/netskope
+  - netskopeoss/netskopebwan
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (Terraform partner tier)
 source:
 - https://marketplace.atlassian.com/
