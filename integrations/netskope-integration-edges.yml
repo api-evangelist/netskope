@@ -25,6 +25,7 @@ checked:
 - https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
 - opentofu/integrations/opentofu-integration-edges.yml
 - terraform/integrations/terraform-integration-edges.yml
+- miro/integrations/miro-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -406,5 +407,22 @@ edges:
   category: infrastructure-as-code provider registry listing
   badges:
   - Verified publisher (Terraform partner tier)
+- partner_name: Miro (own)
+  partner: miro
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://miro.com/marketplace/netskope/
+  mirror_of: miro/integrations/miro-integration-edges.yml
+  apps:
+  - Netskope One for Miro Data Security
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Miro app
 source:
 - https://marketplace.atlassian.com/
